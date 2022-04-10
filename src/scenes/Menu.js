@@ -12,7 +12,7 @@ class Menu extends Phaser.Scene {
 
     create() {
         let menuConfig = {
-            fontFamily: "Courier",
+            fontFamily: "Consolas",
             fontSize: "28px",
             backgroundColor: "#F3B141",
             color: "#843605",
@@ -29,10 +29,10 @@ class Menu extends Phaser.Scene {
 
         // show menu text
         this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, "ROCKET PATROL", menuConfig).setOrigin(0.5);
-        this.add.text(game.config.width/2, game.config.height/2, "Use L and R arrow keys to move & (F) to fire", menuConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2, "Use ← → keys to move & (F) to fire", menuConfig).setOrigin(0.5)
         menuConfig.backgroundColor = "#00FF00";
         menuConfig.color = "#000";
-        this.add.text(game.config.width/2, game.config.height/2 + borderUISize*2 + borderPadding, "Press L arrow key for Novice or R arrow key for Expert", menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, "Press ← for Novice or → for Expert", menuConfig).setOrigin(0.5);
 
         // define menu keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);

@@ -2,7 +2,9 @@ let config = {
     type: Phaser.CANVAS,
     width: 640,
     height: 480,
-    scene: [ Menu, Play ]
+    scene: [ Menu, Play ],
+    parent: "rocket-patrol-game",
+    backgroundColor: "0b1927"
 };
 
 let game = new Phaser.Game(config);
@@ -13,3 +15,5 @@ let borderPadding = borderUISize / 3; // padding is 1/45 of the game height
 
 // keyboard variables
 let keyF, keyR, keyLEFT, keyRIGHT;
+
+document.getElementById("audio").volume = 0.5;
