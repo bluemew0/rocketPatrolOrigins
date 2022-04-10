@@ -8,6 +8,7 @@ class Menu extends Phaser.Scene {
         this.load.audio("sfx_select", "./assets/select.wav");
         this.load.audio("sfx_explosion", "./assets/explosion.wav");
         this.load.audio("sfx_rocket", "./assets/rocketShoot.wav");
+        this.load.audio("bg_music", "./assets/04All-of-Us.mp3")
     }
 
     create() {
@@ -26,6 +27,9 @@ class Menu extends Phaser.Scene {
                 width: game.config.width - borderUISize*2
             }
         }
+
+        this.music = this.sound.add("bg_music", {volume: 0.5});
+        this.music.play();
 
         // show menu text
         this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, "ROCKET PATROL", menuConfig).setOrigin(0.5);

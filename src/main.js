@@ -16,4 +16,4 @@ let borderPadding = borderUISize / 3; // padding is 1/45 of the game height
 // keyboard variables
 let keyF, keyR, keyLEFT, keyRIGHT;
 
-document.getElementById("audio").volume = 0.5;
+document.getElementById("audio").volume = 0;
